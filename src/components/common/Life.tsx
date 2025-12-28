@@ -64,6 +64,55 @@ const Life = () => {
       caption: "Student Success Stories",
       url: "https://www.instagram.com/dazzlingworldacademy/",
     },
+    {
+      id: "3",
+      thumbnail:
+        "https://images.pexels.com/photos/3963857/pexels-photo-3963857.jpeg",
+      caption: "Makeup Transformation",
+      url: "https://www.instagram.com/dazzlingworldacademy/",
+    },
+    {
+      id: "4",
+      thumbnail:
+        "https://images.pexels.com/photos/3956679/pexels-photo-3956679.jpeg",
+      caption: "Before & After",
+      url: "https://www.instagram.com/dazzlingworldacademy/",
+    },
+    {
+      id: "5",
+      thumbnail:
+        "https://images.pexels.com/photos/3992099/pexels-photo-3992099.jpeg",
+      caption: "Academy Life",
+      url: "https://www.instagram.com/dazzlingworldacademy/",
+    },
+    {
+      id: "6",
+      thumbnail:
+        "https://images.pexels.com/photos/3938012/pexels-photo-3938012.jpeg",
+      caption: "Skincare Routine",
+      url: "https://www.instagram.com/dazzlingworldacademy/",
+    },
+    {
+      id: "7",
+      thumbnail:
+        "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      caption: "Hairstyle Tips",
+      url: "https://www.instagram.com/dazzlingworldacademy/",
+    },
+    {
+      id: "8",
+      thumbnail:
+        "https://images.pexels.com/photos/3940683/pexels-photo-3940683.jpeg",
+      caption: "Student Testimonials",
+      url: "https://www.instagram.com/dazzlingworldacademy/",
+    },
+    {
+      id: "9",
+      thumbnail:
+        "https://images.pexels.com/photos/3962286/pexels-photo-3962286.jpeg",
+      caption: "Professional Training",
+      url: "https://www.instagram.com/dazzlingworldacademy/",
+    },
   ];
 
   useEffect(() => {
