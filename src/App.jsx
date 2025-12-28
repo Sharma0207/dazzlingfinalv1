@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { useLenis } from "./hooks/useLenis";
-import Navbar from "./components/common/Navbar";
+import FixedNavbar from "./components/common/FixedNavbar";
 import Hero from "./components/common/Hero";
 import Afterhero from "./components/common/Afterhero";
 import Mission from "./components/common/Mission";
@@ -22,21 +22,42 @@ function App() {
 
   return (
     <div className="App">
-      
-      <Hero />
-      <Afterhero />
-
-      <Mission />
-      <ScrollGallery />
-      <Courses />
+      <FixedNavbar />
+      <section id="hero">
+        <Hero />
+      </section>
+      <section id="afterhero">
+        <Afterhero />
+      </section>
+      <section id="mission">
+        <Mission />
+      </section>
+      <section id="gallery">
+        <ScrollGallery />
+      </section>
+      <section id="courses">
+        <Courses />
+      </section>
       <Curve />
-      <Awards />
-      <Team />
+      <section id="awards">
+        <Awards />
+      </section>
+      <section id="team">
+        <Team />
+      </section>
       <ImageReveal />
-      <Testimonial />
-      <Process />
-      <Faq />
-      <Footer />
+      <section id="testimonial">
+        <Testimonial />
+      </section>
+      <section id="process">
+        <Process />
+      </section>
+      <section id="faq">
+        <Faq />
+      </section>
+      <section id="footer">
+        <Footer />
+      </section>
     </div>
   );
 }
