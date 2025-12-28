@@ -5,6 +5,7 @@ import FixedNavbar from "./components/common/FixedNavbar";
 import Hero from "./components/common/Hero";
 import Afterhero from "./components/common/Afterhero";
 import Mission from "./components/common/Mission";
+import Life from "./components/common/Life";
 import Courses from "./components/common/Courses";
 import Process from "./components/common/Process";
 import Faq from "./components/common/Faq";
@@ -13,8 +14,6 @@ import Awards from "./components/common/Awards";
 import Curve from "./components/common/Curve";
 import Team from "./components/common/Team";
 import Testimonial from "./components/common/Testimonial";
-import ScrollGallery from "./components/common/ScrollGallery";
-import ImageReveal from "./components/lightswind/image-reveal";
 
 function App() {
   // Initialize smooth scroll with Lenis
