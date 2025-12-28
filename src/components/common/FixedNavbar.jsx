@@ -27,6 +27,7 @@ export default function FixedNavbar() {
     { label: 'Home', href: '#hero' },
     { label: 'About', href: '#afterhero' },
     { label: 'Mission', href: '#mission' },
+    { label: 'Life @Dazzling', href: '#life' },
     { label: 'Courses', href: '#courses' },
     { label: 'Team', href: '#team' },
     { label: 'Contact', href: '#footer' },
