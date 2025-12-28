@@ -41,11 +41,11 @@ export default function FixedNavbar() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 md:h-24">
         <div className="flex items-center justify-between h-full">
           {/* Left - Hamburger Menu */}
-          <div className="flex-shrink-0 relative w-16 h-full">
+          <div className="flex-shrink-0">
             <HamburgerMenuOverlay
               items={menuItems}
               buttonTop="50%"
-              buttonLeft="8px"
+              buttonLeft="24px"
               buttonSize="md"
               buttonColor="#D09163"
               overlayBackground="rgba(0, 0, 0, 0.9)"
