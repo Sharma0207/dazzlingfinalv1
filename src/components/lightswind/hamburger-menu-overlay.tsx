@@ -169,9 +169,6 @@ export const HamburgerMenuOverlay: React.FC<HamburgerMenuOverlayProps> = ({
 
           .hamburger-overlay-${zIndex}.open {
             pointer-events: auto;
-          }
-          
-          .hamburger-overlay-${zIndex}.open {
             clip-path: circle(150% at ${buttonLeft} ${buttonTop});
           }
           
