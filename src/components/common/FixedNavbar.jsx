@@ -86,7 +86,13 @@ export default function FixedNavbar() {
               </span>
             </div>
 
-            {/* Enquire Button - Hidden, using floating EnquiryForm instead */}
+            {/* Enquire Button */}
+            <button
+              className="px-3 md:px-5 py-2 md:py-2.5 bg-[#1D1D1D] rounded-lg hover:bg-[#2D2D2D] transition-colors text-white font-libre-franklin text-xs md:text-sm font-bold"
+              onClick={() => window.dispatchEvent(new CustomEvent('openEnquiryForm'))}
+            >
+              Enquire
+            </button>
           </div>
         </div>
       </div>
