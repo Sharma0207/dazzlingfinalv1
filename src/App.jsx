@@ -23,10 +23,7 @@ function App() {
   return (
     <div className="App">
       <FixedNavbar />
-      <EnquiryForm
-        buttonText="Enquire"
-        buttonPosition={{ top: "120px", right: "24px" }}
-      />
+      <EnquiryForm />
       <div id="hero">
         <Hero />
       </div>
