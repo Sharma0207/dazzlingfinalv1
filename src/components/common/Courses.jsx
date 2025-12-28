@@ -53,13 +53,7 @@ export default function Courses() {
 
   const filteredCourses = courses;
 
-  const slidesPerView = {
-    mobile: 1,
-    tablet: 2,
-    desktop: 4,
-  };
-
-  const [slidesToShow, setSlidesToShow] = useState(4);
+  const [slidesToShow, setSlidesToShow] = useState(3);
 
   useEffect(() => {
     const updateSlidesToShow = () => {
@@ -68,7 +62,7 @@ export default function Courses() {
       } else if (window.innerWidth < 1024) {
         setSlidesToShow(2);
       } else {
-        setSlidesToShow(4);
+        setSlidesToShow(3);
       }
     };
 
@@ -86,10 +80,6 @@ export default function Courses() {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev <= 0 ? maxSlides : prev - 1));
   };
-
-  useEffect(() => {
-    setCurrentSlide(0);
-  }, [activeFilter]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
