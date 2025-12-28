@@ -9,7 +9,7 @@ export default function FixedNavbar() {
     hero: { bg: 'from-[#FFD5BB] via-[#FFF2EA] to-[#FFF7F2]', text: '#000000' },
     afterhero: { bg: 'bg-white', text: '#000000' },
     mission: { bg: 'bg-white', text: '#000000' },
-    gallery: { bg: 'bg-white', text: '#000000' },
+    life: { bg: 'bg-white', text: '#000000' },
     courses: { bg: 'bg-[#FFF7F2]', text: '#000000' },
     awards: { bg: 'bg-white', text: '#000000' },
     team: { bg: 'bg-[#FFF7F2]', text: '#000000' },
