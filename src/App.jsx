@@ -14,6 +14,7 @@ import Awards from "./components/common/Awards";
 import Curve from "./components/common/Curve";
 import Team from "./components/common/Team";
 import Testimonial from "./components/common/Testimonial";
+import EnquiryForm from "./components/common/EnquiryForm";
 
 function App() {
   // Initialize smooth scroll with Lenis
