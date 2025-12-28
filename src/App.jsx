@@ -31,8 +31,8 @@ function App() {
       <div id="mission">
         <Mission />
       </div>
-      <div id="gallery">
-        <ScrollGallery />
+      <div id="life">
+        <Life />
       </div>
       <div id="courses">
         <Courses />
@@ -44,7 +44,6 @@ function App() {
       <div id="team">
         <Team />
       </div>
-      <ImageReveal />
       <div id="testimonial">
         <Testimonial />
       </div>
