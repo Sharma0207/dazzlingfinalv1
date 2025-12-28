@@ -17,37 +17,37 @@ export default function Courses() {
       id: 1,
       title: "Professional Makeup Artistry",
       description: "Master makeup techniques for bridal, fashion, and special occasions with hands-on practice.",
-      image: "https://images.pexels.com/photos/4273459/pexels-photo-4273459.jpeg",
+      image: "https://images.pexels.com/photos/10446994/pexels-photo-10446994.jpeg",
     },
     {
       id: 2,
       title: "Bridal Makeup Specialist",
       description: "Become an expert in traditional and modern bridal makeup with advanced techniques.",
-      image: "https://images.pexels.com/photos/35341781/pexels-photo-35341781.jpeg",
+      image: "https://images.pexels.com/photos/4974344/pexels-photo-4974344.jpeg",
     },
     {
       id: 3,
       title: "Hair Styling & Design",
       description: "Learn cutting, coloring, and styling techniques for all hair types and occasions.",
-      image: "https://images.pexels.com/photos/8468039/pexels-photo-8468039.jpeg",
+      image: "https://images.pexels.com/photos/7332328/pexels-photo-7332328.jpeg",
     },
     {
       id: 4,
       title: "Advanced Skincare & Aesthetics",
       description: "Professional training in skincare science, facials, and aesthetic treatments.",
-      image: "https://images.pexels.com/photos/7581580/pexels-photo-7581580.jpeg",
+      image: "https://images.pexels.com/photos/9356712/pexels-photo-9356712.jpeg",
     },
     {
       id: 5,
       title: "Nail Art & Extension Techniques",
       description: "Master gel nails, extensions, and creative nail art designs for modern beauty.",
-      image: "https://images.pexels.com/photos/3997379/pexels-photo-3997379.jpeg",
+      image: "https://images.pexels.com/photos/1934234/pexels-photo-1934234.jpeg",
     },
     {
       id: 6,
       title: "Beauty Business & Salon Management",
       description: "Learn to manage a salon, handle clients professionally, and build your beauty brand.",
-      image: "https://images.pexels.com/photos/3993124/pexels-photo-3993124.jpeg",
+      image: "https://images.pexels.com/photos/8764616/pexels-photo-8764616.jpeg",
     },
   ];
 
