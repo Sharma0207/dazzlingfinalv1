@@ -31,9 +31,6 @@ function App() {
       <div id="mission">
         <Mission />
       </div>
-      <div id="life">
-        <Life />
-      </div>
       <div id="courses">
         <Courses />
       </div>
@@ -43,6 +40,9 @@ function App() {
       </div>
       <div id="team">
         <Team />
+      </div>
+      <div id="life">
+        <Life />
       </div>
       <div id="testimonial">
         <Testimonial />
