@@ -47,50 +47,29 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-[#FFD5BB] via-[#FFF2EA] to-[#FFF7F2] overflow-hidden">
       {/* Navigation */}
-      <nav className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 md:pt-8 lg:pt-10">
-        <div className="flex items-center justify-between flex-wrap gap-4">
-          {/* Left Navigation */}
-          <div className="flex items-center gap-6 md:gap-8">
-            {/* All Courses Dropdown */}
-            <div className="flex items-center gap-2 cursor-pointer group">
-              <span className="font-libre-franklin text-base font-medium text-black">
-                All Courses
-              </span>
-              <svg
-                className="w-4 h-2.5 fill-black/78 transition-transform group-hover:translate-y-0.5"
-                viewBox="0 0 15 9"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M7.36385 5.72769L13.0915 0L14.7277 1.63615L7.36385 9L0 1.63615L1.63615 0L7.36385 5.72769Z" />
-              </svg>
-            </div>
-
-            {/* Our Academy Dropdown */}
-            <div className="flex items-center gap-2 cursor-pointer group">
-              <span className="font-libre-franklin text-base font-medium text-black">
-                Our Academy
-              </span>
-              <svg
-                className="w-4 h-2.5 fill-black/78 transition-transform group-hover:translate-y-0.5"
-                viewBox="0 0 15 9"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M7.36385 5.72769L13.0915 0L14.7277 1.63615L7.36385 9L0 1.63615L1.63615 0L7.36385 5.72769Z" />
-              </svg>
-            </div>
-
-            {/* All Courses (Mobile visible) */}
-            <div className="hidden sm:block">
-              <span className="font-libre-franklin text-base font-medium text-black">
-                All Courses
-              </span>
-            </div>
+      <nav className="relative z-20">
+        <div className="flex items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 md:pt-8 lg:pt-10 h-24">
+          {/* Left - Hamburger Menu */}
+          <div className="w-20">
+            <HamburgerMenuOverlay
+              items={menuItems}
+              buttonTop="50%"
+              buttonLeft="30px"
+              buttonSize="md"
+              buttonColor="#D09163"
+              overlayBackground="rgba(0, 0, 0, 0.9)"
+              textColor="#ffffff"
+              fontSize="lg"
+              fontWeight="medium"
+              animationDuration={0.6}
+              staggerDelay={0.1}
+              menuAlignment="left"
+              keepOpenOnItemClick={false}
+            />
           </div>
 
           {/* Center Logo */}
-          <div className="absolute left-1/2 -translate-x-1/2 top-4 md:top-6">
+          <div className="flex-1 flex justify-center">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/e1de6b2f2b99de374eacb331d5918da7632c368e"
               alt="Dazzling World Logo"
@@ -98,7 +77,7 @@ export default function Hero() {
             />
           </div>
 
-          {/* Right Navigation */}
+          {/* Right - Phone Number & Button */}
           <div className="flex items-center gap-4 md:gap-6">
             {/* Phone Number */}
             <div className="flex items-center gap-2">
