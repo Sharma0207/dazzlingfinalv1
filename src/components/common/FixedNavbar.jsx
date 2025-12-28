@@ -9,10 +9,10 @@ export default function FixedNavbar() {
     hero: { bg: 'from-[#FFD5BB] via-[#FFF2EA] to-[#FFF7F2]', text: '#000000' },
     afterhero: { bg: 'bg-white', text: '#000000' },
     mission: { bg: 'bg-white', text: '#000000' },
-    gallery: { bg: 'bg-white', text: '#000000' },
     courses: { bg: 'bg-[#FFF7F2]', text: '#000000' },
     awards: { bg: 'bg-white', text: '#000000' },
     team: { bg: 'bg-[#FFF7F2]', text: '#000000' },
+    life: { bg: 'from-[#FFF7F2] to-white', text: '#000000' },
     testimonial: { bg: 'bg-white', text: '#000000' },
     process: { bg: 'bg-[#FFF7F2]', text: '#000000' },
     faq: { bg: 'bg-white', text: '#000000' },
@@ -27,6 +27,7 @@ export default function FixedNavbar() {
     { label: 'Home', href: '#hero' },
     { label: 'About', href: '#afterhero' },
     { label: 'Mission', href: '#mission' },
+    { label: 'Life @Dazzling', href: '#life' },
     { label: 'Courses', href: '#courses' },
     { label: 'Team', href: '#team' },
     { label: 'Contact', href: '#footer' },
@@ -86,7 +87,10 @@ export default function FixedNavbar() {
             </div>
 
             {/* Enquire Button */}
-            <button className="px-3 md:px-5 py-2 md:py-2.5 bg-[#1D1D1D] rounded-lg hover:bg-[#2D2D2D] transition-colors text-white font-libre-franklin text-xs md:text-sm font-bold">
+            <button
+              className="px-3 md:px-5 py-2 md:py-2.5 bg-[#1D1D1D] rounded-lg hover:bg-[#2D2D2D] transition-colors text-white font-libre-franklin text-xs md:text-sm font-bold"
+              onClick={() => window.dispatchEvent(new CustomEvent('openEnquiryForm'))}
+            >
               Enquire
             </button>
           </div>

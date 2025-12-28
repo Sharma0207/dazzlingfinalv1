@@ -9,73 +9,51 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Courses() {
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
-  const [activeFilter, setActiveFilter] = useState("all");
   const [currentSlide, setCurrentSlide] = useState(0);
   const carouselRef = useRef(null);
-
-  const filters = [
-    { id: "diploma", label: "Diploma Course" },
-    { id: "short-term", label: "Short-Term Course" },
-    { id: "certification", label: "Certification Course" },
-  ];
 
   const courses = [
     {
       id: 1,
       title: "Professional Makeup Artistry",
       description: "Master makeup techniques for bridal, fashion, and special occasions with hands-on practice.",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/3bce49a935406e2ae1392df877f3c875d8e7555c?width=569",
-      category: "diploma",
+      image: "https://images.pexels.com/photos/10446994/pexels-photo-10446994.jpeg",
     },
     {
       id: 2,
       title: "Bridal Makeup Specialist",
       description: "Become an expert in traditional and modern bridal makeup with advanced techniques.",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/3bce49a935406e2ae1392df877f3c875d8e7555c?width=569",
-      category: "short-term",
+      image: "https://images.pexels.com/photos/4974344/pexels-photo-4974344.jpeg",
     },
     {
       id: 3,
       title: "Hair Styling & Design",
       description: "Learn cutting, coloring, and styling techniques for all hair types and occasions.",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/3bce49a935406e2ae1392df877f3c875d8e7555c?width=569",
-      category: "certification",
+      image: "https://images.pexels.com/photos/7332328/pexels-photo-7332328.jpeg",
     },
     {
       id: 4,
       title: "Advanced Skincare & Aesthetics",
       description: "Professional training in skincare science, facials, and aesthetic treatments.",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/3bce49a935406e2ae1392df877f3c875d8e7555c?width=569",
-      category: "diploma",
+      image: "https://images.pexels.com/photos/9356712/pexels-photo-9356712.jpeg",
     },
     {
       id: 5,
       title: "Nail Art & Extension Techniques",
       description: "Master gel nails, extensions, and creative nail art designs for modern beauty.",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/3bce49a935406e2ae1392df877f3c875d8e7555c?width=569",
-      category: "short-term",
+      image: "https://images.pexels.com/photos/1934234/pexels-photo-1934234.jpeg",
     },
     {
       id: 6,
       title: "Beauty Business & Salon Management",
       description: "Learn to manage a salon, handle clients professionally, and build your beauty brand.",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/3bce49a935406e2ae1392df877f3c875d8e7555c?width=569",
-      category: "certification",
+      image: "https://images.pexels.com/photos/8764616/pexels-photo-8764616.jpeg",
     },
   ];
 
-  const filteredCourses =
-    activeFilter === "all"
-      ? courses
-      : courses.filter((course) => course.category === activeFilter);
+  const filteredCourses = courses;
 
-  const slidesPerView = {
-    mobile: 1,
-    tablet: 2,
-    desktop: 4,
-  };
-
-  const [slidesToShow, setSlidesToShow] = useState(4);
+  const [slidesToShow, setSlidesToShow] = useState(3);
 
   useEffect(() => {
     const updateSlidesToShow = () => {
@@ -84,7 +62,7 @@ export default function Courses() {
       } else if (window.innerWidth < 1024) {
         setSlidesToShow(2);
       } else {
-        setSlidesToShow(4);
+        setSlidesToShow(3);
       }
     };
 
@@ -102,10 +80,6 @@ export default function Courses() {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev <= 0 ? maxSlides : prev - 1));
   };
-
-  useEffect(() => {
-    setCurrentSlide(0);
-  }, [activeFilter]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -133,70 +107,39 @@ export default function Courses() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 mb-12 md:mb-16">
-          {/* Left: Title */}
-          <div ref={titleRef} className="flex-1">
-            {/* Discover Label with decorative lines */}
-            <div className="flex items-start mb-3 md:mb-4">
-              <motion.div
-                className="h-px w-10 md:w-[42px] bg-[#D09163] bg-opacity-60 mt-4"
-                initial={{ width: 0 }}
-                whileInView={{ width: "2.625rem" }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              />
-              <span className="font-libre-franklin font-medium text-[11px] md:text-[11.331px] text-[#D09163] uppercase tracking-[1px] mx-3 md:mx-4 mt-0.5">
-                Discover
-              </span>
-              <motion.div
-                className="h-px w-10 md:w-[42px] bg-[#D09163] bg-opacity-60 mt-4"
-                initial={{ width: 0 }}
-                whileInView={{ width: "2.625rem" }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              />
-            </div>
-
-            {/* Main Heading */}
-            <motion.h2
-              className="font-playfair-display font-bold text-2xl sm:text-3xl md:text-[29px] text-[#424242] capitalize tracking-[1px] leading-[31px] max-w-[538px]"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+        <div className="text-center mb-12 md:mb-16">
+          {/* Discover Label with decorative lines */}
+          <div className="flex items-center justify-center mb-3 md:mb-4">
+            <motion.div
+              className="h-px w-10 md:w-[42px] bg-[#D09163] bg-opacity-60"
+              initial={{ width: 0 }}
+              whileInView={{ width: "2.625rem" }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.3 }}
-            >
-              Our Beauty Courses
-            </motion.h2>
+              transition={{ duration: 0.6, delay: 0.2 }}
+            />
+            <span className="font-libre-franklin font-medium text-[11px] md:text-[11.331px] text-[#D09163] uppercase tracking-[1px] mx-3 md:mx-4">
+              Discover
+            </span>
+            <motion.div
+              className="h-px w-10 md:w-[42px] bg-[#D09163] bg-opacity-60"
+              initial={{ width: 0 }}
+              whileInView={{ width: "2.625rem" }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            />
           </div>
 
-          {/* Right: Filter Buttons */}
-          <motion.div
-            className="flex flex-wrap gap-3 md:gap-4"
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+          {/* Main Heading */}
+          <motion.h2
+            ref={titleRef}
+            className="font-playfair-display font-bold text-2xl sm:text-3xl md:text-[29px] text-[#424242] capitalize tracking-[1px] leading-[31px]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
           >
-            {filters.map((filter, index) => (
-              <motion.button
-                key={filter.id}
-                onClick={() => setActiveFilter(filter.id)}
-                className={`filter-button px-4 md:px-[15.4px] py-3 md:py-[12.73px] rounded-[10px] font-plus-jakarta font-bold text-sm md:text-[14.4px] leading-[14.4px] transition-all duration-300 ${
-                  activeFilter === filter.id
-                    ? "bg-[#1D1D1D] text-[#FEFEFE]"
-                    : "bg-gray-100 text-[#424242] hover:bg-gray-200"
-                }`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
-              >
-                {filter.label}
-              </motion.button>
-            ))}
-          </motion.div>
+            Our Beauty Courses
+          </motion.h2>
         </div>
 
         {/* Carousel Section */}
@@ -378,10 +321,6 @@ export default function Courses() {
 
         .course-card:hover::before {
           transform: scaleX(1);
-        }
-
-        .filter-button {
-          white-space: nowrap;
         }
       `}</style>
     </section>
