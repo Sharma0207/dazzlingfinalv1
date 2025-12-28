@@ -107,70 +107,39 @@ export default function Courses() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 mb-12 md:mb-16">
-          {/* Left: Title */}
-          <div ref={titleRef} className="flex-1">
-            {/* Discover Label with decorative lines */}
-            <div className="flex items-start mb-3 md:mb-4">
-              <motion.div
-                className="h-px w-10 md:w-[42px] bg-[#D09163] bg-opacity-60 mt-4"
-                initial={{ width: 0 }}
-                whileInView={{ width: "2.625rem" }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              />
-              <span className="font-libre-franklin font-medium text-[11px] md:text-[11.331px] text-[#D09163] uppercase tracking-[1px] mx-3 md:mx-4 mt-0.5">
-                Discover
-              </span>
-              <motion.div
-                className="h-px w-10 md:w-[42px] bg-[#D09163] bg-opacity-60 mt-4"
-                initial={{ width: 0 }}
-                whileInView={{ width: "2.625rem" }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              />
-            </div>
-
-            {/* Main Heading */}
-            <motion.h2
-              className="font-playfair-display font-bold text-2xl sm:text-3xl md:text-[29px] text-[#424242] capitalize tracking-[1px] leading-[31px] max-w-[538px]"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+        <div className="text-center mb-12 md:mb-16">
+          {/* Discover Label with decorative lines */}
+          <div className="flex items-center justify-center mb-3 md:mb-4">
+            <motion.div
+              className="h-px w-10 md:w-[42px] bg-[#D09163] bg-opacity-60"
+              initial={{ width: 0 }}
+              whileInView={{ width: "2.625rem" }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.3 }}
-            >
-              Our Beauty Courses
-            </motion.h2>
+              transition={{ duration: 0.6, delay: 0.2 }}
+            />
+            <span className="font-libre-franklin font-medium text-[11px] md:text-[11.331px] text-[#D09163] uppercase tracking-[1px] mx-3 md:mx-4">
+              Discover
+            </span>
+            <motion.div
+              className="h-px w-10 md:w-[42px] bg-[#D09163] bg-opacity-60"
+              initial={{ width: 0 }}
+              whileInView={{ width: "2.625rem" }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            />
           </div>
 
-          {/* Right: Filter Buttons */}
-          <motion.div
-            className="flex flex-wrap gap-3 md:gap-4"
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+          {/* Main Heading */}
+          <motion.h2
+            ref={titleRef}
+            className="font-playfair-display font-bold text-2xl sm:text-3xl md:text-[29px] text-[#424242] capitalize tracking-[1px] leading-[31px]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
           >
-            {filters.map((filter, index) => (
-              <motion.button
-                key={filter.id}
-                onClick={() => setActiveFilter(filter.id)}
-                className={`filter-button px-4 md:px-[15.4px] py-3 md:py-[12.73px] rounded-[10px] font-plus-jakarta font-bold text-sm md:text-[14.4px] leading-[14.4px] transition-all duration-300 ${
-                  activeFilter === filter.id
-                    ? "bg-[#1D1D1D] text-[#FEFEFE]"
-                    : "bg-gray-100 text-[#424242] hover:bg-gray-200"
-                }`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
-              >
-                {filter.label}
-              </motion.button>
-            ))}
-          </motion.div>
+            Our Beauty Courses
+          </motion.h2>
         </div>
 
         {/* Carousel Section */}
