@@ -199,7 +199,7 @@ const Life = () => {
         </div>
 
         {/* Gallery Container */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center lg:items-start">
           {/* Image Carousel */}
           <div className="relative group">
             <div className="relative overflow-hidden rounded-2xl shadow-xl aspect-square bg-gray-100">
