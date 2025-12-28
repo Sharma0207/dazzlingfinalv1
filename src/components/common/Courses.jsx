@@ -322,10 +322,6 @@ export default function Courses() {
         .course-card:hover::before {
           transform: scaleX(1);
         }
-
-        .filter-button {
-          white-space: nowrap;
-        }
       `}</style>
     </section>
   );
