@@ -61,7 +61,7 @@ export default function Hero() {
 
         {/* Image Gallery */}
         <div className="relative mx-auto mb-8 md:mb-12 lg:mb-16 max-w-5xl">
-          {/* Desktop View - Tilted Images */}
+          {/* Desktop View - Tilted Images with Spread Animation */}
           <div className="hidden md:block relative h-64 lg:h-72">
             {images.map((image, index) => (
               <motion.div
@@ -70,16 +70,28 @@ export default function Hero() {
                 style={{
                   left: image.left,
                 }}
-                initial={{ opacity: 0, y: 40, rotate: 0 }}
-                animate={{ opacity: 1, y: 0, rotate: parseFloat(image.rotation) }}
+                initial={{
+                  opacity: 0,
+                  scale: 0.5,
+                  x: -80,
+                  y: 60,
+                  rotate: 0
+                }}
+                animate={{
+                  opacity: 1,
+                  scale: 1,
+                  x: 0,
+                  y: 0,
+                  rotate: parseFloat(image.rotation)
+                }}
                 transition={{
-                  duration: 0.8,
-                  delay: index * 0.1,
-                  ease: "easeOut",
+                  duration: 1.2,
+                  delay: index * 0.12,
+                  ease: [0.34, 1.56, 0.64, 1],
                 }}
                 whileHover={{
                   y: -12,
-                  scale: 1.05,
+                  scale: 1.08,
                   transition: { duration: 0.3 },
                 }}
               >
