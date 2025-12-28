@@ -104,21 +104,29 @@ export default function Hero() {
             ))}
           </div>
 
-          {/* Mobile & Tablet View - Grid */}
+          {/* Mobile & Tablet View - Grid with Spread Animation */}
           <div className="md:hidden grid grid-cols-2 sm:grid-cols-3 gap-4">
             {images.slice(0, 6).map((image, index) => (
               <motion.div
                 key={index}
                 className="aspect-square"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
+                initial={{
+                  opacity: 0,
+                  scale: 0.3,
+                  y: 50,
+                }}
+                animate={{
+                  opacity: 1,
+                  scale: 1,
+                  y: 0,
+                }}
                 transition={{
-                  duration: 0.6,
-                  delay: index * 0.08,
-                  ease: "easeOut",
+                  duration: 0.8,
+                  delay: index * 0.1,
+                  ease: [0.34, 1.56, 0.64, 1],
                 }}
                 whileHover={{
-                  scale: 1.08,
+                  scale: 1.12,
                   transition: { duration: 0.3 },
                 }}
               >
