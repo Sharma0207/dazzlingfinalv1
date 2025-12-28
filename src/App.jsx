@@ -23,41 +23,41 @@ function App() {
   return (
     <div className="App">
       <FixedNavbar />
-      <section id="hero">
+      <div id="hero">
         <Hero />
-      </section>
-      <section id="afterhero">
+      </div>
+      <div id="afterhero">
         <Afterhero />
-      </section>
-      <section id="mission">
+      </div>
+      <div id="mission">
         <Mission />
-      </section>
-      <section id="gallery">
+      </div>
+      <div id="gallery">
         <ScrollGallery />
-      </section>
-      <section id="courses">
+      </div>
+      <div id="courses">
         <Courses />
-      </section>
+      </div>
       <Curve />
-      <section id="awards">
+      <div id="awards">
         <Awards />
-      </section>
-      <section id="team">
+      </div>
+      <div id="team">
         <Team />
-      </section>
+      </div>
       <ImageReveal />
-      <section id="testimonial">
+      <div id="testimonial">
         <Testimonial />
-      </section>
-      <section id="process">
+      </div>
+      <div id="process">
         <Process />
-      </section>
-      <section id="faq">
+      </div>
+      <div id="faq">
         <Faq />
-      </section>
-      <section id="footer">
+      </div>
+      <div id="footer">
         <Footer />
-      </section>
+      </div>
     </div>
   );
 }
