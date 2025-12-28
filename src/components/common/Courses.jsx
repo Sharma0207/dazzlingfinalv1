@@ -9,65 +9,49 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Courses() {
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
-  const [activeFilter, setActiveFilter] = useState("all");
   const [currentSlide, setCurrentSlide] = useState(0);
   const carouselRef = useRef(null);
-
-  const filters = [
-    { id: "diploma", label: "Diploma Course" },
-    { id: "short-term", label: "Short-Term Course" },
-    { id: "certification", label: "Certification Course" },
-  ];
 
   const courses = [
     {
       id: 1,
       title: "Professional Makeup Artistry",
       description: "Master makeup techniques for bridal, fashion, and special occasions with hands-on practice.",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/3bce49a935406e2ae1392df877f3c875d8e7555c?width=569",
-      category: "diploma",
+      image: "https://images.pexels.com/photos/4273459/pexels-photo-4273459.jpeg",
     },
     {
       id: 2,
       title: "Bridal Makeup Specialist",
       description: "Become an expert in traditional and modern bridal makeup with advanced techniques.",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/3bce49a935406e2ae1392df877f3c875d8e7555c?width=569",
-      category: "short-term",
+      image: "https://images.pexels.com/photos/35341781/pexels-photo-35341781.jpeg",
     },
     {
       id: 3,
       title: "Hair Styling & Design",
       description: "Learn cutting, coloring, and styling techniques for all hair types and occasions.",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/3bce49a935406e2ae1392df877f3c875d8e7555c?width=569",
-      category: "certification",
+      image: "https://images.pexels.com/photos/8468039/pexels-photo-8468039.jpeg",
     },
     {
       id: 4,
       title: "Advanced Skincare & Aesthetics",
       description: "Professional training in skincare science, facials, and aesthetic treatments.",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/3bce49a935406e2ae1392df877f3c875d8e7555c?width=569",
-      category: "diploma",
+      image: "https://images.pexels.com/photos/7581580/pexels-photo-7581580.jpeg",
     },
     {
       id: 5,
       title: "Nail Art & Extension Techniques",
       description: "Master gel nails, extensions, and creative nail art designs for modern beauty.",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/3bce49a935406e2ae1392df877f3c875d8e7555c?width=569",
-      category: "short-term",
+      image: "https://images.pexels.com/photos/3997379/pexels-photo-3997379.jpeg",
     },
     {
       id: 6,
       title: "Beauty Business & Salon Management",
       description: "Learn to manage a salon, handle clients professionally, and build your beauty brand.",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/3bce49a935406e2ae1392df877f3c875d8e7555c?width=569",
-      category: "certification",
+      image: "https://images.pexels.com/photos/3993124/pexels-photo-3993124.jpeg",
     },
   ];
 
-  const filteredCourses =
-    activeFilter === "all"
-      ? courses
-      : courses.filter((course) => course.category === activeFilter);
+  const filteredCourses = courses;
 
   const slidesPerView = {
     mobile: 1,
