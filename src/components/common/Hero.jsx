@@ -1,7 +1,16 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { HamburgerMenuOverlay } from "../lightswind/hamburger-menu-overlay";
 
 export default function Hero() {
+  const menuItems = [
+    { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
+    { label: "Services", href: "#services" },
+    { label: "Portfolio", href: "#portfolio" },
+    { label: "Team", href: "#team" },
+    { label: "Contact", href: "#contact" },
+  ];
   const images = [
     {
       src: "https://api.builder.io/api/v1/image/assets/TEMP/ce6bb8ec8b1eb4b7c0f2831bef3e02cc196ad3bb",
