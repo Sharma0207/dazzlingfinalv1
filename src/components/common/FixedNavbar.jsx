@@ -44,7 +44,7 @@ export default function FixedNavbar() {
           <div className="flex-shrink-0">
             <HamburgerMenuOverlay
               items={menuItems}
-              buttonTop="42px"
+              buttonTop="40px"
               buttonLeft="24px"
               buttonSize="md"
               buttonColor="#D09163"
