@@ -34,18 +34,18 @@ export default function FixedNavbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isGradient ? `bg-gradient-to-r ${colors.bg}` : colors.bg
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 md:h-24 relative">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 md:h-24">
+        <div className="flex items-center justify-between h-full">
           {/* Left - Hamburger Menu */}
-          <div className="flex-shrink-0 w-12">
+          <div className="flex-shrink-0 relative w-16 h-full">
             <HamburgerMenuOverlay
               items={menuItems}
-              buttonTop="calc(50% + 2.5rem)"
-              buttonLeft="0px"
+              buttonTop="50%"
+              buttonLeft="8px"
               buttonSize="md"
               buttonColor="#D09163"
               overlayBackground="rgba(0, 0, 0, 0.9)"
