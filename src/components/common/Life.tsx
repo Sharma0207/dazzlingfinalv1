@@ -261,8 +261,8 @@ const Life = () => {
           </div>
 
           {/* Video Carousel */}
-          <div className="relative group">
-            <div className="relative overflow-hidden rounded-2xl shadow-xl aspect-video bg-gray-100">
+          <div className="relative group mx-auto w-full max-w-xs">
+            <div className="relative overflow-hidden rounded-2xl shadow-xl bg-gray-100" style={{ aspectRatio: "9 / 16" }}>
               {loading ? (
                 <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
                   <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#D09163]"></div>
